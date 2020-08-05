@@ -1,0 +1,16 @@
+1. Identify 2-3 changes that can be made to our environment to prevent an SSH brute force attack from the internet.
+
+	- Don't allow SSH passwords use private key authentication
+	- Don't listen on every interface
+	- set up strong passwords/ passphrases for ssh users and keys
+	- create a network interface for ssh which is different to the interface you serve requests
+	- disable openssh server on the laptops and desktops
+	- limit max authentication attempts
+	- Enable login notifications over email 
+
+
+
+2. Neither instance should have had access to the secret recipes bucket; even in the instance that API credentials were compromised how could we have prevented access to sensitive data?
+
+	- Sensitve data should be encrypted with - AWS customer keys.  
+	- Multi factor authentication and strong passwords. 
